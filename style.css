@@ -208,9 +208,56 @@ section {
     font-size: 1.1rem;
 }
 
-.alur-cta {
+/* --- [BARU] CSS Untuk Grid Kontak PPDB --- */
+.kontak-ppdb-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 kolom di mobile */
+    gap: 20px;
+    max-width: 800px; /* Batasi lebar agar tidak terlalu besar di desktop */
+    margin: 0 auto;
+}
+
+.kontak-ppdb-card {
+    background-color: var(--putih);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 30px;
     text-align: center;
-    margin-top: 30px;
+}
+
+.kontak-ppdb-card .kontak-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--hijau-attaqwa);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.kontak-ppdb-card .kontak-nama {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--hitam-attaqwa);
+    margin-bottom: 20px;
+}
+
+/* Tombol WA kustom */
+.wa-button {
+    background-color: #25D366; /* Warna resmi WhatsApp */
+    border-color: #25D366;
+    color: var(--putih);
+    width: 100%; /* Tombol lebar penuh */
+}
+.wa-button:hover {
+    background-color: #1DAE54;
+    border-color: #1DAE54;
+    color: var(--putih);
+}
+
+/* Media Query: Buat 2 kolom di desktop */
+@media (min-width: 768px) {
+    .kontak-ppdb-grid {
+        grid-template-columns: 1fr 1fr; /* 2 kolom */
+    }
 }
 
 /* --- [STRUKTUR UX] Bagian Jurusan --- */
@@ -232,6 +279,38 @@ section {
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
+}
+
+/* --- [BARU] CSS Untuk Section Prestasi --- */
+.prestasi {
+    background-color: var(--latar-abu);
+}
+
+/* * Kita menggunakan ulang style '.berita-card', 
+ * jadi kita hanya perlu style konten di dalamnya.
+*/
+.prestasi-content {
+    padding: 25px;
+    text-align: center; /* Rata tengah agar rapi */
+}
+
+.prestasi-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--hijau-attaqwa); /* Samakan dengan keunggulan */
+}
+
+.prestasi-content p {
+    font-size: 1rem;
+    color: var(--teks-abu);
+    margin-bottom: 20px; /* Jarak sebelum tombol */
+    min-height: 40px; /* Jaga tinggi agar tombol sejajar */
+}
+
+/* Style khusus untuk tombol download */
+.prestasi-content .download-btn {
+    font-size: 15px;
+    padding: 10px 24px;
 }
 
 /* --- [BARU] CSS Untuk Galeri --- */
@@ -844,36 +923,4 @@ body.menu-open .hamburger-btn .line:nth-child(3) {
     .hamburger-btn {
         display: none;
     }
-}
-
-/* --- [BARU] CSS Untuk Section Prestasi --- */
-.prestasi {
-    background-color: var(--latar-abu);
-}
-
-/* * Kita menggunakan ulang style '.berita-card', 
- * jadi kita hanya perlu style konten di dalamnya.
-*/
-.prestasi-content {
-    padding: 25px;
-    text-align: center; /* Rata tengah agar rapi */
-}
-
-.prestasi-content h3 {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    color: var(--hijau-attaqwa); /* Samakan dengan keunggulan */
-}
-
-.prestasi-content p {
-    font-size: 1rem;
-    color: var(--teks-abu);
-    margin-bottom: 20px; /* Jarak sebelum tombol */
-    min-height: 40px; /* Jaga tinggi agar tombol sejajar */
-}
-
-/* Style khusus untuk tombol download */
-.prestasi-content .download-btn {
-    font-size: 15px;
-    padding: 10px 24px;
 }
