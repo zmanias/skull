@@ -811,10 +811,12 @@ section {
 
     /* [BARU] Atur ukuran dan warna logo SVG */
     .wa-icon {
-        width: 1em; /* Ukuran relatif terhadap font */
-        height: 1em;
+        width: 16px; /* Ukuran relatif terhadap font */
+        height: 16px;
         /* 'currentColor' berarti warna akan ikut warna link (hijau) */
         fill: currentColor; 
+        
+        flex-shrink: 0;
     }
     
     .hero h1 {
