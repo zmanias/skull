@@ -845,3 +845,35 @@ body.menu-open .hamburger-btn .line:nth-child(3) {
         display: none;
     }
 }
+
+/* --- [BARU] CSS Untuk Section Prestasi --- */
+.prestasi {
+    background-color: var(--latar-abu);
+}
+
+/* * Kita menggunakan ulang style '.berita-card', 
+ * jadi kita hanya perlu style konten di dalamnya.
+*/
+.prestasi-content {
+    padding: 25px;
+    text-align: center; /* Rata tengah agar rapi */
+}
+
+.prestasi-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--hijau-attaqwa); /* Samakan dengan keunggulan */
+}
+
+.prestasi-content p {
+    font-size: 1rem;
+    color: var(--teks-abu);
+    margin-bottom: 20px; /* Jarak sebelum tombol */
+    min-height: 40px; /* Jaga tinggi agar tombol sejajar */
+}
+
+/* Style khusus untuk tombol download */
+.prestasi-content .download-btn {
+    font-size: 15px;
+    padding: 10px 24px;
+}
