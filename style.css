@@ -757,30 +757,6 @@ section {
 }
 
 
-/* --- [TEKNIS] Media Query untuk Tablet dan Desktop (Mobile-First) --- */
-
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex; /* Kembalikan ke flex untuk desktop */
-        position: static;
-        flex-direction: row;
-        height: auto;
-        width: auto;
-        background: none;
-        transform: none;
-        padding-top: 0;
-    }
-    .nav-links li {
-        margin: 0 0 0 25px; /* Margin horizontal */
-    }
-    .nav-links a {
-         color: var(--teks-abu); /* Pastikan warna kembali normal */
-    }
-
-    .hamburger-btn {
-        display: none; /* Sembunyikan tombol hamburger di desktop */
-    }
-    
     /* [MODIFIKASI] Atur 'creator-credit' sebagai container */
     /* [MODIFIKASI] Atur 'creator-credit' sebagai container */
     .creator-credit {
@@ -820,6 +796,35 @@ section {
     .creator-credit a.creator-button:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+/* --- [TEKNIS] Media Query untuk Tablet dan Desktop (Mobile-First) --- */
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Kembalikan ke flex untuk desktop */
+        position: static;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: none;
+        transform: none;
+        padding-top: 0;
+    }
+    .nav-links li {
+        margin: 0 0 0 25px; /* Margin horizontal */
+    }
+    .nav-links a {
+         color: var(--teks-abu); /* Pastikan warna kembali normal */
+    }
+
+    .hamburger-btn {
+        display: none; /* Sembunyikan tombol hamburger di desktop */
+    }
+    
+    /* [BARU] Sembunyikan kredit di desktop */
+    li.creator-credit {
+        display: none;
     }
     
     .hero h1 {
