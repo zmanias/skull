@@ -782,46 +782,43 @@ section {
         display: none; /* Sembunyikan tombol hamburger di desktop */
     }
     
-    /* --- [BARU] CSS Untuk Kredit Pembuat di Menu Mobile --- */
+    /* [MODIFIKASI] Atur 'creator-credit' sebagai container */
     .creator-credit {
-        margin-top: 40px; /* Jarak dari 'Kontak' */
-        padding: 20px 20px 0 20px;
+        margin-top: 30px; /* Jarak dari 'Kontak' */
+        padding: 25px 20px 20px 20px; /* Padding di dalam kotak */
         border-top: 1px solid #eee; /* Garis pemisah */
-        text-align: center;
         width: 100%;
     }
-    .creator-credit p {
+    
+    /* [BARU] Judul kecil di atas tombol */
+    .creator-title {
         font-size: 0.9rem;
         color: var(--teks-abu);
-        line-height: 1.5;
-        margin-bottom: 5px;
+        text-align: center;
+        margin-bottom: 15px;
     }
-        .creator-credit a {
-        font-size: 1rem !important; 
-        font-weight: 600 !important;
-        color: var(--hijau-attaqwa) !important; 
-        text-decoration: underline;
     
-        /* [MODIFIKASI] Kembalikan flex untuk menyejajarkan logo */
-        display: inline-flex; 
-        align-items: center;
-        justify-content: center;
-        gap: 8px; /* Jarak antara logo dan nomor */
+    /* [MODIFIKASI] Jadikan 'a' sebagai tombol hijau */
+    .creator-credit a.creator-button {
+        display: block; /* Tombol lebar penuh */
+        text-decoration: none;
+        text-align: center;
+        
+        /* Gunakan style tombol hijau (bukan WA) */
+        background-color: var(--hijau-attaqwa); 
+        border: 2px solid var(--hijau-attaqwa);
+        color: var(--putih);
+    
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem; /* Ukuran font pas untuk menu */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
-    /* [PERBAIKAN FINAL v3] Atur ukuran dan warna logo SVG */
-    li.creator-credit a .wa-icon {
-        /* Menggunakan selector yang sangat spesifik */
-        width: 16px;  
-        height: 16px; 
-        min-width: 16px;  /* Memaksa ukuran minimum */
-        min-height: 16px; /* Memaksa ukuran minimum */
-        
-        /* 'currentColor' berarti warna akan ikut warna link (hijau) */
-        fill: currentColor; 
-        
-        /* [PENTING] Mencegah ikon membesar/mengecil di dalam flexbox */
-        flex-shrink: 0; 
+    
+    .creator-credit a.creator-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     
     .hero h1 {
