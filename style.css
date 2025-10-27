@@ -258,7 +258,6 @@ section {
     .kontak-ppdb-grid {
         grid-template-columns: 1fr 1fr; /* 2 kolom */
     }
-    .creator-credit { display: none; }
 }
 
 /* --- [STRUKTUR UX] Bagian Jurusan --- */
@@ -783,11 +782,13 @@ section {
     }
     
     /* [MODIFIKASI] Atur 'creator-credit' sebagai container */
+    /* [MODIFIKASI] Atur 'creator-credit' sebagai container */
     .creator-credit {
-        margin-top: 30px; /* Jarak dari 'Kontak' */
-        padding: 25px 20px 20px 20px; /* Padding di dalam kotak */
-        border-top: 1px solid #eee; /* Garis pemisah */
+        margin-top: 30px; 
+        padding: 25px 20px 20px 20px; 
+        border-top: 1px solid #eee; 
         width: 100%;
+        text-align: center; /* <-- [BARU] Tambahkan ini */
     }
     
     /* [BARU] Judul kecil di atas tombol */
@@ -800,7 +801,7 @@ section {
     
     /* [MODIFIKASI] Jadikan 'a' sebagai tombol hijau */
     .creator-credit a.creator-button {
-        display: block; /* Tombol lebar penuh */
+        display: inline-block; /* Tombol lebar penuh */
         text-decoration: none;
         text-align: center;
         
