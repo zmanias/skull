@@ -104,5 +104,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    
+    // --- [BARU: LOGIKA UNTUK SLIDER KANAN-KIRI] ---
+    
+    // 1. Temukan SEMUA slider-track di halaman
+    const sliderTracks = document.querySelectorAll('.slider-track');
+    
+    // 2. Loop setiap slider-track yang ditemukan
+    sliderTracks.forEach(track => {
+        
+        // 3. Temukan 'dots' yang berhubungan dengan track ini
+        const dotsContainer = track.nextElementSibling;
+        if (!dotsContainer || !dotsContainer.classList.contains('slider-dots')) return;
+        const dots = dotsContainer.querySelectorAll('.dot');
+        
+        // 4. Tambahkan event listener 'scroll' ke track ini
+        track.addEventListener('scroll', () => {
+            
+            // 5. Hitung slide mana yang sedang aktif
+            const slideWidth = track.clientWidth;
+            // Gunakan Math.round() untuk menentukan slide terdekat
+            const activeSlideIndex = Math.round(track.scrollLeft / slideWidth);
+            
+            // 6. Update 'active' class pada dots
+            dots.forEach((dot, index) => {
+                if (index === activeSlideIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    });
 
 });

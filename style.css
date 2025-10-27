@@ -313,41 +313,62 @@ section {
     padding: 10px 24px;
 }
 
-/* --- [BARU] CSS Untuk Slider Gambar Prestasi (Fade Effect) --- */
-
-.prestasi-image-slider {
+/* --- [BARU] CSS Untuk Slider Kanan-Kiri di dalam Card --- */
+.card-slider {
     position: relative;
     width: 100%;
-    height: 220px; /* Samakan dengan tinggi gambar berita */
     overflow: hidden;
-    background-color: #eee; /* Latar jika gambar gagal dimuat */
 }
 
-/* Atur kedua gambar agar saling tumpuk */
-.prestasi-image-slider .img-front,
-.prestasi-image-slider .img-back {
-    position: absolute;
-    top: 0;
-    left: 0;
+.slider-track {
+    display: flex;
+    /* [TEKNIS] Aktifkan scroll horizontal & snap */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    
+    /* [DESAIN BERSIH] Sembunyikan scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-item {
+    /* [TEKNIS] Setiap item mengambil 100% lebar card */
+    flex: 0 0 100%;
     width: 100%;
-    height: 100%;
+    scroll-snap-align: center; /* Kunci di tengah saat scroll */
+}
+
+.slider-item img {
+    width: 100%;
+    height: 220px; /* Samakan dengan tinggi gambar berita */
     object-fit: cover;
-    /* Transisi untuk animasi fade */
-    transition: opacity 0.4s ease-in-out;
+    display: block;
 }
 
-/* Sembunyikan gambar belakang (orangnya) secara default */
-.prestasi-image-slider .img-back {
-    opacity: 0;
+/* [UI] Indikator Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
 }
 
-/* Saat 'card' di-hover oleh pengguna... */
-.berita-card:hover .prestasi-image-slider .img-back {
-    opacity: 1; /* Tampilkan gambar orangnya */
+.slider-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
 }
 
-.berita-card:hover .prestasi-image-slider .img-front {
-    opacity: 0; /* Sembunyikan gambar sertifikat */
+.slider-dots .dot.active {
+    background-color: var(--hijau-attaqwa);
 }
 
 /* --- [BARU] CSS Untuk Galeri --- */
