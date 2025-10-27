@@ -809,14 +809,19 @@ section {
         gap: 8px; /* Jarak antara logo dan nomor */
     }
 
-    /* [BARU] Atur ukuran dan warna logo SVG */
-    .wa-icon {
-        width: 16px; /* Ukuran relatif terhadap font */
-        height: 16px;
+    /* [PERBAIKAN FINAL v3] Atur ukuran dan warna logo SVG */
+    li.creator-credit a .wa-icon {
+        /* Menggunakan selector yang sangat spesifik */
+        width: 16px;  
+        height: 16px; 
+        min-width: 16px;  /* Memaksa ukuran minimum */
+        min-height: 16px; /* Memaksa ukuran minimum */
+        
         /* 'currentColor' berarti warna akan ikut warna link (hijau) */
         fill: currentColor; 
         
-        flex-shrink: 0;
+        /* [PENTING] Mencegah ikon membesar/mengecil di dalam flexbox */
+        flex-shrink: 0; 
     }
     
     .hero h1 {
