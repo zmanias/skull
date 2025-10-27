@@ -796,12 +796,26 @@ section {
         line-height: 1.5;
         margin-bottom: 5px;
     }
-    .creator-credit a {
-        font-size: 1rem !important; /* Paksa ukuran font agar mudah dibaca */
+        .creator-credit a {
+        font-size: 1rem !important; 
         font-weight: 600 !important;
-        color: var(--hijau-attaqwa) !important; /* Pakai warna utama */
+        color: var(--hijau-attaqwa) !important; 
         text-decoration: underline;
+    
+        /* [MODIFIKASI] Kembalikan flex untuk menyejajarkan logo */
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+        gap: 8px; /* Jarak antara logo dan nomor */
     }
+
+/* [BARU] Atur ukuran dan warna logo SVG */
+.wa-icon {
+    width: 1.1em; /* Ukuran relatif terhadap font */
+    height: 1.1em;
+    /* 'currentColor' berarti warna akan ikut warna link (hijau) */
+    fill: currentColor; 
+}
     
     .hero h1 {
         font-size: 3.5rem; /* 56px */
