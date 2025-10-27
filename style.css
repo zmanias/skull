@@ -258,6 +258,7 @@ section {
     .kontak-ppdb-grid {
         grid-template-columns: 1fr 1fr; /* 2 kolom */
     }
+    .creator-credit { display: none; }
 }
 
 /* --- [STRUKTUR UX] Bagian Jurusan --- */
