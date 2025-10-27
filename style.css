@@ -780,7 +780,28 @@ section {
     .hamburger-btn {
         display: none; /* Sembunyikan tombol hamburger di desktop */
     }
-
+    
+    /* --- [BARU] CSS Untuk Kredit Pembuat di Menu Mobile --- */
+    .creator-credit {
+        margin-top: 40px; /* Jarak dari 'Kontak' */
+        padding: 20px 20px 0 20px;
+        border-top: 1px solid #eee; /* Garis pemisah */
+        text-align: center;
+        width: 100%;
+    }
+    .creator-credit p {
+        font-size: 0.9rem;
+        color: var(--teks-abu);
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+    .creator-credit a {
+        font-size: 1rem !important; /* Paksa ukuran font agar mudah dibaca */
+        font-weight: 600 !important;
+        color: var(--hijau-attaqwa) !important; /* Pakai warna utama */
+        text-decoration: underline;
+    }
+    
     .hero h1 {
         font-size: 3.5rem; /* 56px */
     }
