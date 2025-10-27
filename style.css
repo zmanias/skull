@@ -673,6 +673,42 @@ section {
     font-size: 1rem;
 }
 
+/* --- [BARU] CSS Untuk Tombol Play TTS --- */
+.chat-message.ai {
+    /* Pesan AI sekarang flexbox agar tombol sejajar rapi */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.chat-message.ai p {
+     flex: 1; /* Teks mengambil ruang sisa */
+}
+
+.play-tts {
+    flex-shrink: 0; /* Mencegah tombol mengecil */
+    width: 32px;
+    height: 32px;
+    background: var(--putih); /* Putih agar kontras di kuning */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.play-tts:hover {
+    background: #f0f0f0; 
+}
+.play-tts:disabled {
+    background: #eee;
+    color: #999;
+    cursor: default;
+}
+
 /* Responsif untuk mobile kecil */
 /* [PERBAIKAN] Responsif untuk semua Mobile & Tablet (di bawah 767px) */
 @media (max-width: 767px) {
